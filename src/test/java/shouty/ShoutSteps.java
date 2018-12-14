@@ -12,9 +12,9 @@ public class ShoutSteps {
     private static final String ARBITRARY_MESSAGE = "Hello, world";
     private final Shouty shouty = new Shouty();
 
-    @Given("Lucy is at {int}, {int}")
-    public void lucy_is_at(int xCoord, int yCoord) {
-        shouty.setLocation("Lucy", new Coordinate(xCoord, yCoord));
+    @Given("{word} is at {int}, {int}")
+    public void lucy_is_at(String name, int xCoord, int yCoord) {
+        shouty.setLocation(name, new Coordinate(xCoord, yCoord));
     }
 
     @Given("Sean is at {int}, {int}")
