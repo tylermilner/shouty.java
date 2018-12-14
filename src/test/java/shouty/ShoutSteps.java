@@ -27,9 +27,9 @@ public class ShoutSteps {
         assertEquals(1, shouty.getShoutsHeardBy("Lucy").size());
     }
 
-    @Then("Lucy should hear nothing")
-    public void lucy_should_hear_nothing() {
-        assertEquals(emptyMap(), shouty.getShoutsHeardBy("Lucy"));
+    @Then("{word} should hear nothing")
+    public void name_should_hear_nothing(String name) {
+        assertEquals(emptyMap(), shouty.getShoutsHeardBy(name));
     }
 
     @Then("Lucy should not hear Oscar")
