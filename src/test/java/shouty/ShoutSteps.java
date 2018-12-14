@@ -17,11 +17,6 @@ public class ShoutSteps {
         shouty.setLocation(name, new Coordinate(xCoord, yCoord));
     }
 
-    @Given("Sean is at {int}, {int}")
-    public void sean_is_at(int xCoord, int yCoord) {
-        shouty.setLocation("Sean", new Coordinate(xCoord, yCoord));
-    }
-
     @When("Sean shouts")
     public void sean_shouts() {
         shouty.shout("Sean", ARBITRARY_MESSAGE);
