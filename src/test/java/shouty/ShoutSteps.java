@@ -34,6 +34,6 @@ public class ShoutSteps {
 
     @Then("Lucy should not hear Oscar")
     public void lucyShouldNotHearOscar() {
-        assertEquals(shouty.getShoutsHeardBy("Lucy"), shouty.getShoutsHeardBy("Sean"));
+        assertEquals(shouty.getShoutsHeardBy("Lucy").toString(), "{Sean=[Hello, world]}");
     }
 }
