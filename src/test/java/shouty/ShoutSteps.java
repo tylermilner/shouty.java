@@ -13,7 +13,7 @@ public class ShoutSteps {
     private final Shouty shouty = new Shouty();
 
     @Given("{word} is at {int}, {int}")
-    public void lucy_is_at(String name, int xCoord, int yCoord) {
+    public void name_is_at(String name, int xCoord, int yCoord) {
         shouty.setLocation(name, new Coordinate(xCoord, yCoord));
     }
 
