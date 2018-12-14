@@ -17,9 +17,9 @@ public class ShoutSteps {
         shouty.setLocation(name, new Coordinate(xCoord, yCoord));
     }
 
-    @When("Sean shouts")
-    public void sean_shouts() {
-        shouty.shout("Sean", ARBITRARY_MESSAGE);
+    @When("{word} shouts")
+    public void name_shouts(String name) {
+        shouty.shout(name, ARBITRARY_MESSAGE);
     }
 
     @Then("Lucy should hear Sean")
