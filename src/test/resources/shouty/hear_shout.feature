@@ -15,7 +15,7 @@ Feature: Hear Shout
     Then Lucy should hear nothing
 
   Scenario: Multiple shouters
-    Given Lucy is at 0,0
+    Given Lucy is at 0, 0
     And Sean is at 0, 500
     And Oscar is at 1100, 0
     When Sean shouts
