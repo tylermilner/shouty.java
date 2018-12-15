@@ -39,16 +39,9 @@ public class ShoutSteps {
     }
 
     @Given("people are located at")
-    public void peopleAreLocatedAt(List<List<String>> dataTable) {
-        for (int i = 1; i < dataTable.size(); i++) {
-            List<String> row = dataTable.get(i);
-
-            String name = row.get(0);
-            int xCoord = new Integer(row.get(1)).intValue();
-            int yCoord = new Integer(row.get(2)).intValue();
-
-            Coordinate location = new Coordinate(xCoord, yCoord);
-            shouty.setLocation(name, location);
+    public void peopleAreLocatedAt(List<PersonLocation> dataTable) {
+        for (PersonLocation personLocation : dataTable) {
+            shouty.setLocation(personLocation.getName(), personLocation.getCoordinate());
         }
     }
 }
