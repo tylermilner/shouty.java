@@ -25,6 +25,7 @@ Feature: Hear Shout
     Then Lucy should not hear Oscar
     But Lucy should hear Sean
 
+  @wip
   Scenario: Own shout is not heard
     When Lucy shouts
     Then Lucy should hear nothing
