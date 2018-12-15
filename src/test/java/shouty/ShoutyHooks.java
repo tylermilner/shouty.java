@@ -5,13 +5,25 @@ import cucumber.api.java.After;
 
 public class ShoutyHooks {
 
-    @Before
+    // Before hooks executed in ascending order
+    @Before(order = 1)
     public void beforeEachScenario() {
         System.out.println("Before scenario hook");
     }
 
-    @After
+    // After hooks executed in descending order
+    @After(order = 2)
     public void afterEachScenario() {
         System.out.println("After scenario hook");
+    }
+
+    @Before(order = 2)
+    public void beforeEachScenarioHookTwo() {
+        System.out.println("Before scenario hook 2");
+    }
+
+    @After(order = 1)
+    public void afterEachScenarioHookTwo() {
+        System.out.println("After scenario hook 2");
     }
 }
