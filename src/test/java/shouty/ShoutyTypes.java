@@ -26,6 +26,14 @@ public class ShoutyTypes implements cucumber.api.TypeRegistryConfigurer {
 
             return new PersonLocation(name, xCoord, yCoord);
         }));
+
+        typeRegistry.defineParameterType(new ParameterType<>(
+                "coordinate",
+                "(\\d+), (\\d+)",
+                Coordinate.class,
+                (CaptureGroupTransformer<Coordinate>) groups ->
+                        new Coordinate(parseInt(groups[0]), parseInt(groups[1]))
+        ));
     }
 
 }
