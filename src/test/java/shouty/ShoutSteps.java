@@ -11,7 +11,7 @@ public class ShoutSteps {
     private static final String ARBITRARY_MESSAGE = "Hello, world";
 
     @Autowired
-    private Shouty shouty;
+    private ShoutyHelper shouty;
 
     @When("{word} shouts")
     public void name_shouts(String name) {

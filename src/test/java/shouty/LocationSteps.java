@@ -7,7 +7,7 @@ import java.util.List;
 public class LocationSteps {
 
     @Autowired
-    private Shouty shouty;
+    private ShoutyHelper shouty;
 
     @Given("{word} is at {int}, {int}")
     public void name_is_at(String name, int xCoord, int yCoord) {
