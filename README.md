@@ -1,3 +1,7 @@
+# Fork
+
+This fork contains my work during a BDD workshop that I attended in December of 2018. As I worked through the exercises, I commited my changes to the `feature/bdd-workshop` branch. The main intention behind this fork is to simply document the steps I took to apply advanced Cucumber techniques/features to the simple "shouty" example on the `master` branch. 
+
 # Shouty
 
 Shouty is a social networking application for short physical distances.
