@@ -30,6 +30,7 @@ Feature: Hear Shout
     When Lucy shouts
     Then Lucy should hear nothing
 
+  @wip2
   Scenario: Multiple shouts from one person
     And Sean is at 0, 500
     When Sean shouts

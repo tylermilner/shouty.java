@@ -27,12 +27,12 @@ public class ShoutyHooks {
         System.out.println("After scenario hook 2");
     }
 
-    @Before("@wip")
+    @Before("@wip, @wip2")
     public void beforeWIP() {
         System.out.println("Before WIP hook");
     }
 
-    @After("@wip")
+    @After("@wip, @wip2")
     public void afterWIP() {
         System.out.println("After WIP hook");
     }
