@@ -6,7 +6,7 @@ import cucumber.api.java.After;
 public class ShoutyHooks {
 
     // Before hooks executed in ascending order
-    @Before(order = 1)
+    @Before(order = 2)
     public void beforeEachScenario() {
         System.out.println("Before scenario hook");
     }
@@ -17,7 +17,7 @@ public class ShoutyHooks {
         System.out.println("After scenario hook");
     }
 
-    @Before(order = 2)
+    @Before(order = 3)
     public void beforeEachScenarioHookTwo() {
         System.out.println("Before scenario hook 2");
     }
@@ -27,12 +27,12 @@ public class ShoutyHooks {
         System.out.println("After scenario hook 2");
     }
 
-    @Before("@wip, @wip2")
+    @Before(value = "@wip, @wip2", order = 1)
     public void beforeWIP() {
         System.out.println("Before WIP hook");
     }
 
-    @After("@wip, @wip2")
+    @After(value = "@wip, @wip2", order = 3)
     public void afterWIP() {
         System.out.println("After WIP hook");
     }
