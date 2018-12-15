@@ -44,4 +44,9 @@ public class ShoutSteps {
             shouty.setLocation(personLocation.getName(), personLocation.getCoordinate());
         }
     }
+
+    @Then("Lucy should hear {int} shouts from Sean")
+    public void lucyShouldHearShoutsFromSean(Integer int1) {
+        assertEquals(int1.intValue(), shouty.getShoutsHeardBy("Lucy").get("Sean").size());
+    }
 }
